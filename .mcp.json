@@ -3,13 +3,28 @@
     "Project-scoped MCP servers. Claude Code picks this up when you run `claude`",
     "inside a clone of this repo, and asks you to approve each server first.",
     "Keys are read from your shell environment via ${VAR} — never stored here.",
-    "Both servers are third-party community packages, pinned to versions that",
-    "were verified to exist on npm. Enable whichever key you actually have."
+    "Both are third-party community packages, pinned to verified npm versions.",
+    "",
+    "Verified by actually running them in a cloud session:",
+    "  * ${PWD} expands to the directory you launched `claude` from, not the repo",
+    "    root. Images land in <that dir>/previews, and each server REFUSES to write",
+    "    anywhere outside it. Launch claude from the repo root, or set the *_OUTPUT_DIR",
+    "    below to an absolute path.",
+    "  * A server with no key still starts, then fails on the first call — except",
+    "    gemini-mcp, which closes the connection outright. A missing GEMINI_API_KEY",
+    "    is the usual cause of 'gemini-image (CONNECTION_CLOSED)'.",
+    "  * From a CLOUD Claude Code session api.openai.com is blocked by the network",
+    "    egress proxy ('Host not in allowlist'), so openai-image only works locally.",
+    "    generativelanguage.googleapis.com IS reachable there, so gemini-image works",
+    "    in both places once a key exists."
   ],
   "mcpServers": {
     "gemini-image": {
       "command": "npx",
-      "args": ["-y", "@houtini/gemini-mcp@2.6.2"],
+      "args": [
+        "-y",
+        "@houtini/gemini-mcp@2.6.2"
+      ],
       "env": {
         "GEMINI_API_KEY": "${GEMINI_API_KEY}",
         "GEMINI_IMAGE_OUTPUT_DIR": "${PWD}/previews"
@@ -17,7 +32,10 @@
     },
     "openai-image": {
       "command": "npx",
-      "args": ["-y", "openai-gpt-image-mcp-server@1.4.0"],
+      "args": [
+        "-y",
+        "openai-gpt-image-mcp-server@1.4.0"
+      ],
       "env": {
         "OPENAI_API_KEY": "${OPENAI_API_KEY}",
         "OPENAI_IMAGE_OUTPUT_DIR": "${PWD}/previews",
