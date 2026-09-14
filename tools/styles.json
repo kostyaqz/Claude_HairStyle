@@ -1,0 +1,63 @@
+{
+  "_comment": "Наборы промптов. IDENTITY_GUARD подставляется в каждый промпт автоматически.",
+
+  "styles": [
+    {
+      "id": "curtains",
+      "label": "Шторки, 12–16 см",
+      "note": "Основная цель, 7–9 месяцев",
+      "prompt": "Restyle only the hair into a medium-length textured curtain hairstyle, about 14 cm long on top. The hair is parted slightly off-centre and falls forward and outward in two soft panels that drape diagonally across the forehead and cover both temple corners. Matte finish with visible texture and a slight natural wave, never glossy or wet-looking. Dry, naturally styled hair with root volume."
+    },
+    {
+      "id": "side_part",
+      "label": "Боковой пробор, 15–18 см",
+      "note": "Максимум укрытия при минимуме длины",
+      "prompt": "Restyle only the hair into a medium-long side-parted style, about 16 cm long on top. A defined part sits well off-centre; the heavier side sweeps diagonally across the forehead and fully covers the far temple corner, while a shorter panel covers the near one. Matte texture, soft natural movement, dry styled hair with root lift. Not slicked, not glossy."
+    },
+    {
+      "id": "flow",
+      "label": "Flow, зачёс назад, 18–25 см",
+      "note": "Работает только на объёме",
+      "prompt": "Restyle only the hair into a longer swept-back 'flow' style, about 20 cm long, brushed up and back off the forehead with strong volume at the roots, the length falling in loose waves behind the ears and down to the nape. The hairline is left fully exposed. Matte, dry, airy texture with no gel, no shine and no wet look."
+    },
+    {
+      "id": "jaw_length",
+      "label": "До челюсти, слоями, 20–25 см",
+      "note": "Слои обязательны",
+      "prompt": "Restyle only the hair into a layered jaw-length hairstyle, about 22 cm long, parted off-centre, falling past the ears to roughly jaw level, framing the face and covering both temple corners. Visible layers remove weight through the mid-lengths so the hair keeps body instead of hanging flat. Dry, matte, softly waved."
+    },
+    {
+      "id": "shoulder",
+      "label": "До плеч, 30+ см",
+      "note": "Самый требовательный финал",
+      "prompt": "Restyle only the hair into long layered shoulder-length hair, about 32 cm, parted off-centre, falling to the shoulders with soft natural waves and long layers that keep volume through the crown. Covers both temple corners. Healthy dry matte texture, realistic for fine light-brown hair, not thick or glossy."
+    },
+    {
+      "id": "bun",
+      "label": "Низкий пучок (контрпример)",
+      "note": "Чтобы увидеть, почему не стоит",
+      "prompt": "Restyle only the hair into long hair pulled straight back into a low bun at the nape, with the hair smoothed back tightly away from the face so the entire frontal hairline is fully exposed, including both receded temple corners. Dry matte hair, no gel shine. This is intentionally an unflattering reference view."
+    }
+  ],
+
+  "stages": [
+    {
+      "id": "month_03",
+      "label": "Месяц 3, ~8 см",
+      "note": "Верх лезет в стороны",
+      "prompt": "Restyle only the hair to about 8 cm long on top, an in-between grown-out length: too long to stand up, not yet long enough to lie flat, pushed forward and slightly to one side with matte texture paste. The sides are still trimmed short and neat, and the hair begins to widen out above the ears. Realistic awkward-stage grow-out, dry and matte."
+    },
+    {
+      "id": "month_06",
+      "label": "Месяц 6, ~12 см",
+      "note": "Самый неудобный отрезок",
+      "prompt": "Restyle only the hair to about 12 cm long on top, a grown-out length where the fringe reaches the eyebrows and is pushed to one side, with the sides grown out to blend rather than clipped. Matte textured finish, dry, slight natural wave, realistic mid-grow-out stage."
+    },
+    {
+      "id": "month_10",
+      "label": "Месяц 10, ~16 см",
+      "note": "Шторки заработали",
+      "prompt": "Restyle only the hair to about 16 cm long, reaching the cheekbones, parted slightly off-centre and falling forward in two soft curtain panels that cover both temple corners. The sides have fully grown out and blend into the length. Dry, matte, naturally textured."
+    }
+  ]
+}
