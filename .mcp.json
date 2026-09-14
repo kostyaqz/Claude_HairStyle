@@ -1,0 +1,28 @@
+{
+  "$comment": [
+    "Project-scoped MCP servers. Claude Code picks this up when you run `claude`",
+    "inside a clone of this repo, and asks you to approve each server first.",
+    "Keys are read from your shell environment via ${VAR} — never stored here.",
+    "Both servers are third-party community packages, pinned to versions that",
+    "were verified to exist on npm. Enable whichever key you actually have."
+  ],
+  "mcpServers": {
+    "gemini-image": {
+      "command": "npx",
+      "args": ["-y", "@houtini/gemini-mcp@2.6.2"],
+      "env": {
+        "GEMINI_API_KEY": "${GEMINI_API_KEY}",
+        "GEMINI_IMAGE_OUTPUT_DIR": "${PWD}/previews"
+      }
+    },
+    "openai-image": {
+      "command": "npx",
+      "args": ["-y", "openai-gpt-image-mcp-server@1.4.0"],
+      "env": {
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}",
+        "OPENAI_IMAGE_OUTPUT_DIR": "${PWD}/previews",
+        "OPENAI_IMAGE_INPUT_DIR": "${PWD}"
+      }
+    }
+  }
+}
